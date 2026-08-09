@@ -96,8 +96,13 @@ def train_svm(x, y, learning_rate, reg_lambda, n_epochs):
         params=apply_update(params,grads,learning_rate)
     return params
 
-# Step 10 - predict_labels (not yet solved)
-# TODO: implement
+# Step 10 - predict_labels
+import numpy as np
+
+def predict_labels(x, params):
+    # TODO: return an array of {-1, +1} labels, one per row of x, using params['w'] and params['b'].
+    scores=compute_scores(x,params)
+    return predict_from_scores(scores)
 
 # Step 11 - accuracy_score (not yet solved)
 # TODO: implement
